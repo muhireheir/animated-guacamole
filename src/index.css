@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+.popup{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.608);
+  position: absolute;
+  top: 0px;
+}
+.pupup-body{
+  background-color: rgb(240, 248, 255);
+  padding: 40px;
+}
