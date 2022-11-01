@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const AddProduct = ({setItems,items}) => {
 
-    const [item, setItem] = useState({ price: "", name: "" });
-    const [image,setImage] = useState('');
+    const [item, setItem] = useState({ price: "", title: "" });
+    // const [image,setImage] = useState('');
 
     const changeItem = (e) => {
         setItem({ ...item, [e.target.name]: e.target.value })
@@ -17,7 +17,7 @@ const AddProduct = ({setItems,items}) => {
         const reader = new FileReader();
     
         reader.addEventListener("load", () => {
-            setImage(reader.result)
+            // setImage(reader.result)
         });
     
         reader.readAsDataURL(file);
@@ -26,7 +26,7 @@ const AddProduct = ({setItems,items}) => {
 
       const addItem = () => {
         setItems([...items, item])
-        setItem({ price: "", name: "" })
+        setItem({ price: "", title: "" })
       }
 
   return (
@@ -34,7 +34,7 @@ const AddProduct = ({setItems,items}) => {
     <div className="col col-6 m-auto pupup-body mt-5">
         <div className="mb-3">
           <label className="form-label">Name</label>
-          <input value={item.name} onChange={changeItem} name='name' type="text" className="form-control" placeholder="Ibiraha" />
+          <input value={item.title} onChange={changeItem} name='title' type="text" className="form-control" placeholder="Ibiraha" />
         </div>
         <div className="mb-3">
           <label className="form-label">Price</label>

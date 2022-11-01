@@ -8,7 +8,7 @@ const Home = ({items}) => {
         {
           items.map(function (item, index) {
             return (<li key={index} className="list-group-item">
-              <div>{item.name}</div>
+              <div>{item.title}</div>
               <div>{item.price}</div>
             </li>)
           })
